@@ -16,7 +16,7 @@
  * @package    symfony
  * @subpackage widget
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: sfWidgetFormJQueryDate.class.php 24589 2009-11-30 18:20:44Z FabianLange $
+ * @version    SVN: $Id: sfWidgetFormJQueryDate.class.php 30197 2010-07-11 04:43:47Z Kris.Wallsmith $
  */
 class sfWidgetFormJQueryDate extends sfWidgetForm
 {
@@ -122,7 +122,7 @@ EOF
       $prefix,
       $this->generateId($name.'[year]'), $this->generateId($name.'[month]'),
       $this->generateId($name.'[day]'), $this->generateId($name.'[day]'),
-      ($this->getOption('can_be_empty') ? 'daysInMonth' : 'daysInMonth - 1'),
+      ($this->getOption('date_widget')->getOption('can_be_empty') ? 'daysInMonth' : 'daysInMonth - 1'),
       $this->generateId($name.'[day]'), $this->generateId($name.'[day]'),
       $id,
       min($this->getOption('date_widget')->getOption('years')), max($this->getOption('date_widget')->getOption('years')),
